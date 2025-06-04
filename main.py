@@ -7,3 +7,6 @@ a = 3
 b=4 
 c = a + b
 print("La somme de", a, "et", b, "est", c)
+
+
+#testettetete de projet clonnee de github 
