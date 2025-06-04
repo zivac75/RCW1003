@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://localhost:8000'
+url = 'rcw-test-first-evgmhsdsh4hgcwgt.canadaeast-01.azurewebsites.net/api/hello'
 
 response = requests.get(url)
 response =response.json()
