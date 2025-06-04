@@ -1,9 +1,20 @@
-#afficher les numeros de un a dix
+from fastapi import FastAPI , HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
-for i in range(1,11):
-    print(i)
+app = FastAPI()
 
-a = 3 
-b=4 
-c = a + b
-print("La somme de", a, "et", b, "est", c)
+@app.get("/")
+async def welcome():
+    try:
+        return{"message" : "TNAKT"}
+    except Exception as e:
+        print(f'Exception : {e}')
+        raise HTTPException(status_code = 500 , detail = str(e))
+    
+@app.get("/")
+async def Bienvenue():
+    try:
+        return{"message" : "TNAKT x2"}
+    except Exception as e:
+        print(f'Exception : {e}')
+        raise HTTPException(status_code = 500 , detail = str(e))
